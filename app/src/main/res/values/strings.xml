@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ActivityTest</string>
+    <string name="menu_title">菜单列表</string>
+    <string name="default_price">$74</string>
+    <string name="extra_price">另需服务费$3</string>
+    <string name="order_btn">点餐</string>
+    <string name="_0">1</string>
+    <string name="signal">$ </string>
+    <string name="default_price_item">88</string>
+</resources>

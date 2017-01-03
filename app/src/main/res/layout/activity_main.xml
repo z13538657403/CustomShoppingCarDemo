@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/action_title"
+        layout="@layout/menu_title_layout"/>
+
+    <LinearLayout
+        android:layout_below="@+id/action_title"
+        android:layout_above="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/m_list_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:scrollbars="none"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/m_list_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:scrollbars="none"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/m_list_bt"
+        android:background="@color/divider_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/m_list_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/m_list_all_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/price_tv"
+            android:text="@string/default_price"/>
+
+        <View
+            android:id="@+id/m_listView"
+            android:layout_width="1dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/m_list_all_price"
+            android:background="@color/divider_short"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/m_listView"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/extra_price_tv"
+            android:text="@string/extra_price"/>
+
+        <Button
+            android:id="@+id/m_list_submit"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/order_btn"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/m_list_car_lay"
+        android:layout_width="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/m_car_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_shop_car"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/m_list_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/goods_tv_bg_selector"
+        android:layout_alignRight="@+id/m_list_car_lay"
+        android:layout_alignTop="@+id/m_list_car_lay"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/_0"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
